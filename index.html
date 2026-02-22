@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloom Core Pilates Studio | Nairobi's Premier Pilates Sanctuary</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- Styling (internal) the required fields under the contact form-->
+
+<body>
+
+   <header id="hero-header">
+    <!-- Navigation -->
+    <nav aria-label="Main navigation">
+        <div class="logo">Bloom Core Pilates Studio 🌸🧘🏿⚫✨</div> <br>
+        <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#services">Classes</a></li>
+            <li><a href="#about">Our Story</a></li>
+            <li><a href="#contact">Join Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero content -->
+    <div class="hero-content">
+        <div class="hero-emoji"> Mind, Body & Core <br> 🧘‍♀️🧠</div>
+        <h1>Strengthen your Core, Bloom from within.</h1>
+        <p>Authentic Pilates in the heart of Kenya. Boutique classes designed for every body.</p>
+        <a href="#contact" class="cta-button">Book a Discovery Session</a>
+    </div>
+
+                <h2 id="services-heading">Our Sessions</h2>
+            <div class="service-grid">
+                <article>
+                    <h3>Reformer Pilates</h3>
+                    <p>Dynamic resistance training to build lean muscle and flexibility.</p>
+                </article>
+                <article>
+                    <h3>Mat Pilates</h3>
+                    <p>Focus on breath, alignment, and core stability on the mat.</p>
+                </article>
+                <article>
+                    <h3>Trapeze Yoga</h3>
+                    <p>Combine the benefits of yoga and trapeze for a unique, full-body workout.</p>
+                </article>
+                <article>
+                    <h3>Private Coaching</h3>
+                    <p>1-on-1 sessions tailored to your specific fitness goals.</p>
+                </article>
+            </div>
+</header>
+
+<main>
+
+        <section id="about" aria-labelledby="about-heading">
+            <h2 id="about-heading">About the Studio</h2>
+            <div class="about-content">
+                <img src="studio-placeholder.jpg" alt="Sun-drenched Bloom Core studio with mahogany floors and reformers">
+                <p>Founded in 2024, Bloom Core brings a mindful approach to fitness in Nairobi. Our instructors are certified experts dedicated to helping you move with intention.</p>
+            </div>
+        </section>
+
+ <!--Contact form section-->
+        <section id="contact" aria-labelledby="contact-heading">
+            <h2 id="contact-heading">Connect With Us</h2>
+            <form id="booking-form" action="#" method="POST">
+            <!-- Name and email address are mandatory fields -->
+            <!-- The 'required' attribute ensures that the user must fill out this field before submitting the form -->
+            <!-- The 'placeholder' attribute provides a hint to the user about what to enter -->
+
+                <label for="name">Full Name</label> 
+                <input type="text" id="name" name="name" placeholder="Bee Beyonce" required> 
+           
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="beyonce@gmail.com" required>
+            
+            
+            <!-- The option value enables users to select their preferred service -->    
+                <label for="service-interest">Interested In:</label>
+                <select id="service-interest" name="service">
+                    <option value="reformer">Reformer</option>
+                    <option value="mat">Mat</option>
+                    <option value="trapeze">Trapeze Yoga</option>
+                    <option value="private">Private</option>
+                </select>
+
+                <button type="submit">Send Inquiry</button>
+            </form>
+        </section>
+    </main> <br>
+
+    <footer>
+       <!-- <div class="footer-links">
+            <a href="#" aria-label="Follow us on Instagram">Instagram</a>
+            <a href="#" aria-label="Follow us on Facebook">Facebook</a>
+        </div> -->
+
+    <div class="social-links">
+        <a href="https://wa.me/254700000000" class="social-icon whatsapp" target="_blank" aria-label="Chat with Bloom Core on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        </a>
+
+        <a href="https://instagram.com/bloomcorepilates" class="social-icon instagram" target="_blank" aria-label="Follow Bloom Core on Instagram">
+        <i class="fab fa-instagram"></i>
+        </a>
+
+        <a href="https://facebook.com/bloomcorepilates" class="social-icon facebook" target="_blank" aria-label="Like Bloom Core on Facebook">
+        <i class="fab fa-facebook-f"></i>
+        </a>
+</div>
+        <p>&copy; 2026 Bloom Core Pilates Studio. Located in Westlands, Nairobi.</p>
+    </footer>
+
+</body>
+</html>

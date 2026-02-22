@@ -1,0 +1,129 @@
+/* Styling the Hero section (Value Proposition) */
+/* Make the hero section full screen */
+/* Apply purple gradient to the entire page */
+/* Full-page header/hero */
+#hero-header {
+    height: 200vh; /* full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* nav top, content centered */
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #6a0dad, #9b30ff); /* temporary purple */
+    color: white;
+    position: relative;
+}
+
+/* Navigation */
+#hero-header nav {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* logo and menu centered */
+    align-items: center;
+    gap: 50px;
+}
+
+/* Logo */
+#hero-header nav .logo {
+    font-size: 3rem; /* same as hero h1 */
+    font-weight: bold;
+}
+
+/* Menu links */
+#hero-header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+#hero-header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+#hero-header nav ul li a:hover {
+    color: #e0d7f5;
+}
+
+/* Hero content */
+#hero-header .hero-content {
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Emoji accent */
+#hero-header .hero-emoji {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Hero heading */
+#hero-header h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+/* Paragraph */
+#hero-header p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    color: #e0d7f5;
+}
+
+/* CTA button */
+#hero-header .cta-button {
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #6a0dad;
+    background-color: #ffffff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+#hero-header .cta-button:hover {
+    background-color: #e0d7f5;
+    color: #4b0082;
+}
+
+/* Floating emoji animation */
+/*@keyframes float { 0%, 100% { transform: translateY(0); }50% { transform: translateY(-10px); }}*/
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #hero-header nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #hero-header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+label:has(+ input[required]):after,
+label:has(+ fieldset[required]):after {
+        content: " *";
+        color: red;
+        font-weight: bold;
+            } 
+
+            /* Social links styling */
+.social-links {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    padding: 30px 0;
+}
+
