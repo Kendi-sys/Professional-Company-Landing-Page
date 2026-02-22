@@ -15,41 +15,64 @@
     position: relative;
 }
 
+/* Logo styling */
+/* Logo container positioned top-left */
+#hero-header .logo {
+    position: absolute;
+    top: 20px;       /* distance from top */
+    left: 20px;      /* distance from left */
+    z-index: 10;     /* ensures it stays above background but below other elements if needed */
+}
+
+/* Logo image styling */
+#hero-header .logo img {
+    width: 80px;              /* smaller, unobtrusive size */
+    height: auto;             /* maintain aspect ratio */
+    opacity: 1.0;             /* subtle blending with background */
+    border-radius: 10px;      /* optional: rounded edges for a soft look */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* subtle depth/shadow */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* smooth hover effect */
+}
+
+
 /* Navigation */
-#hero-header nav {
-    width: 100%;
-    display: flex;
-    justify-content: center; /* logo and menu centered */
-    align-items: center;
-    gap: 50px;
-}
-
-/* Logo */
-#hero-header nav .logo {
-    font-size: 3rem; /* same as hero h1 */
-    font-weight: bold;
-}
-
-/* Menu links */
+/* Navigation styling */
 #hero-header nav ul {
     list-style: none;
     display: flex;
-    gap: 25px;
-    margin: 0;
+    gap: 60px;           /* wider spacing between links */
+    margin-top: 40px;    /* space from hero content */
     padding: 0;
+    justify-content: center; /* center horizontally */
 }
 
+/* Navigation links */
 #hero-header nav ul li a {
     text-decoration: none;
     color: white;
-    font-weight: 500;
-    transition: color 0.3s ease;
+    font-weight: 700;       /* make links bold */
+    font-size: 1.4rem;      /* larger font size */
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
+/* Hover effect */
 #hero-header nav ul li a:hover {
-    color: #e0d7f5;
+    color: #e0d7f5;       /* subtle highlight on hover */
+    transform: scale(1.1); /* slight zoom effect */
 }
 
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    #hero-header nav ul {
+        flex-direction: column;
+        gap: 25px;         /* vertical spacing on mobile */
+        margin-top: 30px;
+    }
+
+    #hero-header nav ul li a {
+        font-size: 1.2rem;  /* slightly smaller on mobile */
+    }
+}
 /* Hero content */
 #hero-header .hero-content {
     max-width: 700px;
