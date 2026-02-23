@@ -1,202 +1,231 @@
-/* Make the hero section full screen */
-/* Applying purple gradient to the entire page */
-/* Full-page header/hero */
-#hero-header {
-    min-height: 100vh;   
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-    background: linear-gradient(135deg, #6a0dad, #9b30ff);
-    color: white;
-    position: relative;
-}
-
-/* Logo styling */
-/* Logo container positioned top-left */
-#hero-header .logo {
-    position: absolute;
-    top: 20px;       /* distance from top */
-    left: 20px;      /* distance from left */
-    z-index: 10;     /* ensures it stays above background but below other elements if needed */
-}
-
-/* Logo image styling */
-#hero-header .logo img {
-    width: 80px;              /* smaller, unobtrusive size */
-    height: auto;             /* maintain aspect ratio */
-    opacity: 1.0;             /* subtle blending with background */
-    border-radius: 10px;      /* optional: rounded edges for a soft look */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* subtle depth/shadow */
-    transition: transform 0.3s ease, opacity 0.3s ease; /* smooth hover effect */
-}
-
-
-/* Navigation */
-/* Navigation styling */
-#hero-header nav ul {
-    list-style: none;
-    display: flex;
-    gap: 60px;           /* wider spacing between links */
-    margin-top: 40px;    /* space from hero content */
+/* === Full-page fixed background === */
+html, body {
+    margin: 0;
     padding: 0;
-    justify-content: center; /* center horizontally */
+    height: 100%;
+    font-family: 'Arial', sans-serif;
 }
 
-/* Navigation links */
-#hero-header nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-weight: 700;       /* make links bold */
-    font-size: 1.4rem;      /* larger font size */
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-/* Hover effect */
-#hero-header nav ul li a:hover {
-    color: #e0d7f5;       /* subtle highlight on hover */
-    transform: scale(1.1); /* slight zoom effect */
-}
-
-/* Responsive adjustments for smaller screens */
-@media (max-width: 768px) {
-    #hero-header nav ul {
-        flex-direction: column;
-        gap: 25px;         /* vertical spacing on mobile */
-        margin-top: 30px;
-    }
-
-    #hero-header nav ul li a {
-        font-size: 1.2rem;  /* slightly smaller on mobile */
-    }
-}
-/* Hero content */
-#hero-header .hero-content {
-    max-width: 700px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* Emoji accent */
-#hero-header .hero-emoji {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    animation: float 3s ease-in-out infinite;
-}
-
-/* Hero heading */
-#hero-header h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-}
-
-/* Paragraph */
-#hero-header p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-    line-height: 1.6;
-    color: #e0d7f5;
-}
-
-/* CTA button */
-#hero-header .cta-button {
-    padding: 12px 30px;
-    font-size: 1rem;
-    font-weight: bold;
-    color: #6a0dad;
-    background-color: #ffffff;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-#hero-header .cta-button:hover {
-    background-color: #e0d7f5;
-    color: #4b0082;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    #hero-header nav {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    #hero-header nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-}
-
-
-
-/* Services section styling */
-
-#services h2 {
-    margin-bottom: 15px;   /* To reduce space between the heading and the cards*/
-}
-.service-grid {
-    display: flex;
-    justify-content: center;   /* center the whole row */
-    gap: 30px;                 /* spacing between cards */
-    flex-wrap: nowrap;         /* prevent wrapping, forces single line */
-}
-
-.service-grid article {
-    flex: 1 1 0;               /* all services cards take equal space */
-    max-width: 250px;          /* optional: limit card width */
-}
-
-label:has(+ input[required]):after,
-label:has(+ fieldset[required]):after {
-        content: " *";
-        color: red;
-        font-weight: bold;
-            } 
-
-/*Styling the About us section*/
-#about {
-    position: relative;
+body {
     background-image: url("Images/studio.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 100px 60px;
+    background-attachment: fixed;
     color: white;
 }
 
-#about::before {
+/* Optional dark overlay for readability */
+body::before {
     content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.4); /* dark overlay for readability */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 0;
 }
 
-.about-content {
-    position: relative; /* keeps text above overlay */
+/* Content floats above overlay */
+header, main, footer {
+    position: relative;
+    z-index: 1;
+}
+
+/* === Styling the logo and the navigation links === */
+
+/* Navigation container */
+nav {
     display: flex;
-    justify-content: flex-end; /* pushes text to the right */
+    align-items: center;          /* vertically center logo & links */
+    justify-content: flex-start;   /* logo stays left */
+    padding: 20px 60px;
+    flex-wrap: nowrap;             /* no wrapping */
 }
 
-.about-content p {
-    max-width: 400px;
-    background: rgba(0, 0, 0, 0.6); /* optional glass effect */
+/* Logo stays on the left */
+nav .logo img {
+    max-height: 90px;
+    width: auto;
+    display: block;
+}
+
+/* Nav links container centered */
+.nav-links {
+    flex: 1;
+    display: flex;
+    justify-content: center;  /* center the links horizontally */
+}
+
+/* Nav links styling */
+.nav-links ul {
+    display: flex;
+    gap: 60px;              /* space between links */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links ul li {
+    white-space: nowrap;
+}
+
+.nav-links ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .nav-links ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    nav .logo img {
+        max-height: 70px;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .about-content {
+        font-size: 1rem;
+    }
+}
+
+/* === Hero Section === */
+.hero-content {
+    text-align: center;
+    padding: 150px 20px 80px 20px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background: #ff6f61;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* === Styling the h1 titles to center them === */
+/* Target only the section headings */
+.section-heading {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+/* Top spacing for sections */
+#services-heading,
+#about-heading,
+#contact-heading {
+    margin-top: 200px;  /* pushes sections lower for better visual spacing */
+}
+
+/* Optional responsive adjustments for headings */
+@media (max-width: 1024px) {
+    #services-heading,
+    #about-heading,
+    #contact-heading {
+        margin-top: 150px;
+    }
+
+    #about-heading,
+    #contact-heading {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #services-heading,
+    #about-heading,
+    #contact-heading {
+        margin-top: 120px;
+        font-size: 2rem;
+    }
+}
+
+/* === Service grid === */
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 40px 60px;
+}
+
+.service-grid article {
+    background: rgba(0, 0, 0, 0.5);
     padding: 25px;
     border-radius: 10px;
 }
 
-
-/*Mobile-first responsive design*/
-
-
-            /* Social links styling */
-.social-links {
-    display: flex;
-    gap: 25px;
-    justify-content: center;
-    padding: 30px 0;
+/* === About the Studio === */
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    background: rgba(0,0,0,0.5);
+    padding: 40px 20px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    line-height: 1.6;
 }
 
+/* === Styling the Contact form === */
+#booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#booking-form input, #booking-form select, #booking-form button {
+    padding: 12px;
+    border-radius: 6px;
+    border: none;
+}
+
+#booking-form button {
+    background: #ff6f61;
+    color: white;
+    cursor: pointer;
+}
+
+/* === Styling the footer === */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    background: rgba(0,0,0,0.6); /* Black footer background with some transparency */
+}
+
+.footer-links a {
+    color: white;              /* change text color to white */
+    text-decoration: none;     /* remove underline if any */
+    font-weight: bold;         /* make the links bold */
+    margin: 0 10px;            /* spacing between links */
+}
