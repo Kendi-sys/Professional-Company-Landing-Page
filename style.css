@@ -158,22 +158,37 @@ label:has(+ fieldset[required]):after {
             } 
 
 /*Styling the About us section*/
-.about-content {
-    display: flex;
-    align-items: center;      /* vertically align image & text */
-    gap: 2rem;                /* space between image and paragraph */
+#about {
+    position: relative;
+    background-image: url("Images/studio.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 100px 60px;
+    color: white;
 }
 
-.about-content img {
-    width: 300px;             /* make image smaller */
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;       /* optional: soft corners */
+#about::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4); /* dark overlay for readability */
+}
+
+.about-content {
+    position: relative; /* keeps text above overlay */
+    display: flex;
+    justify-content: flex-end; /* pushes text to the right */
 }
 
 .about-content p {
-    flex: 1;                  /* paragraph takes remaining space */
+    max-width: 400px;
+    background: rgba(0, 0, 0, 0.6); /* optional glass effect */
+    padding: 25px;
+    border-radius: 10px;
 }
+
+
 /*Mobile-first responsive design*/
 
 
