@@ -1,16 +1,15 @@
-/* Styling the Hero section (Value Proposition) */
 /* Make the hero section full screen */
-/* Apply purple gradient to the entire page */
+/* Applying purple gradient to the entire page */
 /* Full-page header/hero */
 #hero-header {
-    height: 200vh; /* full viewport height */
+    min-height: 100vh;   
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* nav top, content centered */
+    justify-content: space-between;
     align-items: center;
     text-align: center;
     padding: 20px;
-    background: linear-gradient(135deg, #6a0dad, #9b30ff); /* temporary purple */
+    background: linear-gradient(135deg, #6a0dad, #9b30ff);
     color: white;
     position: relative;
 }
@@ -119,9 +118,6 @@
     color: #4b0082;
 }
 
-/* Floating emoji animation */
-/*@keyframes float { 0%, 100% { transform: translateY(0); }50% { transform: translateY(-10px); }}*/
-
 /* Responsive adjustments */
 @media (max-width: 768px) {
     #hero-header nav {
@@ -135,12 +131,51 @@
     }
 }
 
+
+
+/* Services section styling */
+
+#services h2 {
+    margin-bottom: 15px;   /* To reduce space between the heading and the cards*/
+}
+.service-grid {
+    display: flex;
+    justify-content: center;   /* center the whole row */
+    gap: 30px;                 /* spacing between cards */
+    flex-wrap: nowrap;         /* prevent wrapping, forces single line */
+}
+
+.service-grid article {
+    flex: 1 1 0;               /* all services cards take equal space */
+    max-width: 250px;          /* optional: limit card width */
+}
+
 label:has(+ input[required]):after,
 label:has(+ fieldset[required]):after {
         content: " *";
         color: red;
         font-weight: bold;
             } 
+
+/*Styling the About us section*/
+.about-content {
+    display: flex;
+    align-items: center;      /* vertically align image & text */
+    gap: 2rem;                /* space between image and paragraph */
+}
+
+.about-content img {
+    width: 300px;             /* make image smaller */
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;       /* optional: soft corners */
+}
+
+.about-content p {
+    flex: 1;                  /* paragraph takes remaining space */
+}
+/*Mobile-first responsive design*/
+
 
             /* Social links styling */
 .social-links {
