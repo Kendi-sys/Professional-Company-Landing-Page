@@ -14,29 +14,33 @@
 <!-- Hero content section combined in the header to have a one pager with a common background -->    
    <header id="hero-header">
     <!-- Navigation -->
-    <nav aria-label="Main navigation">
-        <div class="logo"> 
-        <img src="images/logo.jpg" alt="Bloom Core Pilates Studio logo"> <!-- Studio image logo -->
-       
-        <ul> <!-- Navigation links -->
+<nav aria-label="Main navigation">
+    <div class="logo">
+        <img src="images/logo.png" alt="Bloom Core Pilates Studio logo">
+    </div>
+    <div class="nav-links">
+        <ul>
             <li><a href="#hero">Home</a></li>
             <li><a href="#services">Classes</a></li>
             <li><a href="#about">Our Story</a></li>
-            <li><a href="#contact">Join Us</a></li>
+            <li><a href="#contact">Contact Us</a></li>
         </ul>
-    </nav>
+    </div>
+</nav>
 
 
     <div class="hero-content">
     <!--Hero section with value proposition-->    
-        <div class="hero-emoji"> Mind, Body & Core </div>
-        <h1>Strengthen your Core, Bloom from within.</h1>
+        <div class="hero-emoji"> <h1>Mind, Body & Soul</h1> </div>
+        <h1>Strengthen your core, Bloom from within.</h1>
         <p>Authentic Pilates in the heart of Kenya. Boutique classes designed for every body.</p>
         <a href="#contact" class="cta-button">Book a Discovery Session</a>
     </div>
     <!--Service offering showing available services/classes--> 
-                <h2 id="services-heading">Our Sessions</h2>
-                <div class="service-grid">
+
+
+        <h1 class="section-heading" id="services-heading">Our Sessions</h1>
+           <div class="service-grid">     
                 <article>
                     <h3>Reformer Pilates</h3>
                     <p>Dynamic resistance training to build lean muscle and flexibility.</p>
@@ -59,7 +63,7 @@
 <main>
 
     <section id="about" aria-labelledby="about-heading">
-        <h2 id="about-heading">About the Studio</h2>
+       <h1 class="section-heading" id="about-heading">About the Studio</h1>
         <div class="about-content">
             <p>
                 Founded in 2024 by a passionate fitness lover, Bloom Core brings a mindful approach to fitness in Nairobi.
@@ -70,7 +74,7 @@
 
  <!--Contact form section-->
         <section id="contact" aria-labelledby="contact-heading">
-            <h2 id="contact-heading">Connect With Us</h2>
+            <h1 class="section-heading" id="contact-heading">Connect With Us</h1>
             <form id="booking-form" action="#" method="POST">
             <!-- Name and email address are mandatory fields -->
             <!-- The 'required' attribute ensures that the user must fill out this field before submitting the form -->
@@ -86,6 +90,7 @@
             <!-- The option value enables users to select their preferred service -->    
                 <label for="service-interest">Interested In:</label>
                 <select id="service-interest" name="service">
+                    <option value="select">Select a Service</option>
                     <option value="reformer">Reformer</option>
                     <option value="mat">Mat</option>
                     <option value="trapeze">Trapeze Yoga</option>
